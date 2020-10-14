@@ -1,0 +1,14 @@
+// default config
+
+export const NUMBER_OF_COLUMNS: number = 12;
+export const LAYOUT_CONTAINER_PADDING: number = 8;
+export const COLUMN_INNER_WIDTH: number = 32;
+export const COLUMN_MARGIN: number = 8;
+
+
+// additional sizes
+
+
+export const COLUMN_OUTER_WIDTH = COLUMN_INNER_WIDTH + 2 * COLUMN_MARGIN;
+export const LAYOUT_CONTAINER_INNER_WIDTH = COLUMN_OUTER_WIDTH * NUMBER_OF_COLUMNS;
+export const LAYOUT_CONTAINER_OUTER_WIDTH = LAYOUT_CONTAINER_INNER_WIDTH + 2*LAYOUT_CONTAINER_PADDING;
