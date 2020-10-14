@@ -1,13 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import layoutStyles from '../components/layout/Layout.module.scss'
+import Layout from "../components/layout/Layout";
+import cn from "classnames"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout debug>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div style={{display:"flex", flexWrap: "wrap"}}>
+      <div className={cn(layoutStyles.block, layoutStyles.width2)} style={{height: "300px", backgroundColor: "red"}}/>
+          <div className={cn(layoutStyles.block, layoutStyles.width10)} style={{height: "300px", backgroundColor: "red"}}/>
+          <div className={cn(layoutStyles.block, layoutStyles.width10)} style={{height: "300px", backgroundColor: "red"}}/>
+      </div>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -60,6 +69,6 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
-    </div>
+    </Layout>
   )
 }

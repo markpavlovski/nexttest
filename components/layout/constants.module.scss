@@ -1,0 +1,40 @@
+$black: #000;
+$white: #fff;
+$whiteish: #ccc;
+$turquoise: #55efc4;
+$magenta: lighten(#FF00FF, 20%);
+
+
+// Target total width - 1024
+// Narrow Mode padding - 32px
+
+// Config
+$layoutContainerPadding: 8px;
+$columnInnerWidth: 68px;
+$columnMargin: 8px;
+
+// Calculated:
+
+$columnOuterWidth: calc(#{$columnInnerWidth} + 2 * #{$columnMargin});
+$layoutContainerInnerWidth: calc(12 * #{$columnOuterWidth});
+$layoutContainerOuterWidth: calc(#{$layoutContainerInnerWidth} + 2 * #{$layoutContainerPadding});
+
+// Column Widths:
+
+$columnWidth1: $columnInnerWidth;
+$columnWidth2: calc(2 * #{$columnInnerWidth} + 1 * 2 * #{$columnMargin});
+$columnWidth3: calc(3 * #{$columnInnerWidth} + 2 * 2 * #{$columnMargin});
+$columnWidth4: calc(4 * #{$columnInnerWidth} + 3 * 2 * #{$columnMargin});
+$columnWidth5: calc(5 * #{$columnInnerWidth} + 4 * 2 * #{$columnMargin});
+$columnWidth6: calc(6 * #{$columnInnerWidth} + 5 * 2 * #{$columnMargin});
+$columnWidth7: calc(7 * #{$columnInnerWidth} + 6 * 2 * #{$columnMargin});
+$columnWidth8: calc(8 * #{$columnInnerWidth} + 7 * 2 * #{$columnMargin});
+$columnWidth9: calc(9 * #{$columnInnerWidth} + 8 * 2 * #{$columnMargin});
+$columnWidth10: calc(10 * #{$columnInnerWidth} + 9 * 2 * #{$columnMargin});
+$columnWidth11: calc(11 * #{$columnInnerWidth} + 10 * 2 * #{$columnMargin});
+$columnWidth12: calc(12 * #{$columnInnerWidth} + 11 * 2 * #{$columnMargin});
+
+
+// layout config
+
+$headerHeight: 64px;
