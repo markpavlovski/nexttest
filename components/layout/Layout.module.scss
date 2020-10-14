@@ -3,15 +3,16 @@
 .wallToWallContainer {
   width: 100vw;
   min-height: 100vh;
-  background-color: $whiteish;
 }
 
 .outerContainerHeader {
   width: 100%;
   margin: 0 auto;
-  padding: 0 calc(#{$layoutContainerPadding} + #{$columnMargin});
-  height: $headerHeight;
-  background-color: $black;
+
+  &.stickyHeader {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .innerContainerHeader {
@@ -19,14 +20,10 @@
   max-width: $layoutContainerOuterWidth;
   margin: 0 auto;
   padding: 0 calc(#{$layoutContainerPadding} + #{$columnMargin});
-  height: $headerHeight;
-  background-color: $whiteish;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  height: $defaultHeaderHeight;
 }
 
-.outerContainer {
+.outerContainerBody {
   min-height: 100vh;
   width: $layoutContainerOuterWidth;
   margin: auto;
@@ -37,7 +34,7 @@
   }
 }
 
-.innerContainer {
+.innerContainerBody {
   min-height: 100vh;
   width: $layoutContainerInnerWidth;
 
