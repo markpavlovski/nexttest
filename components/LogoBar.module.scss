@@ -1,0 +1,15 @@
+.container {
+  padding-top: 0.5rem;
+  width: 100%;
+  background: url("/assets/contours-pattern.png") repeat-x;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 284px;
+  height:188px;
+  background: url("/assets/logo-large.png") no-repeat;
+  background-size: contain;
+}

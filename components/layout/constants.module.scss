@@ -1,10 +1,3 @@
-$black: #000;
-$white: #fff;
-$whiteish: #ccc;
-$turquoise: #55efc4;
-$magenta: lighten(#FF00FF, 20%);
-
-
 // Target total width - 1024
 // Narrow Mode padding - 32px
 
@@ -37,4 +30,8 @@ $columnWidth12: calc(12 * #{$columnInnerWidth} + 11 * 2 * #{$columnMargin});
 
 // layout config
 
-$defaultHeaderHeight: 4rem;
+$primaryNavHeight: 2.5rem;
+$secondaryNavHeight: 2rem;
+$secondaryNavMinHeight: 0.5rem;
+$doubleLineNavHeight: calc(#{$primaryNavHeight} + #{$secondaryNavHeight});
+$doubleLineNavMinHeight: calc(#{$primaryNavHeight} + #{$secondaryNavMinHeight});

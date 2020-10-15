@@ -1,0 +1,23 @@
+@import '../styles/constants';
+
+.container {
+  background-color: $white100;
+  padding: 0.5rem 1rem 1rem;
+  border-bottom: 4px solid $lightBrown;
+
+  a {
+    color: $green100;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  .toggleShowMore {
+    color: $green100;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+}

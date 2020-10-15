@@ -1,8 +1,11 @@
+@import "../../styles/constants";
 @import "constants.module";
 
 .wallToWallContainer {
   width: 100vw;
   min-height: 100vh;
+  background: url("/assets/background-image.jpg");
+  background-size: cover;
 }
 
 .outerContainerHeader {
@@ -19,29 +22,62 @@
   width: 100%;
   max-width: $layoutContainerOuterWidth;
   margin: 0 auto;
-  padding: 0 calc(#{$layoutContainerPadding} + #{$columnMargin});
-  height: $defaultHeaderHeight;
+
+  min-height: $doubleLineNavMinHeight;
+
+  &.doubleLineTopNav {
+    min-height: $doubleLineNavHeight;
+  }
 }
 
 .outerContainerBody {
-  min-height: 100vh;
   width: $layoutContainerOuterWidth;
   margin: auto;
   padding: 0 $layoutContainerPadding;
 
+  min-height: calc(100vh - #{$doubleLineNavMinHeight} - #{$primaryNavHeight});
+
+  &.doubleLineTopNav {
+    min-height: calc(100vh - #{$doubleLineNavHeight} - #{$primaryNavHeight});
+  }
+
+  background-color: rgba($white200, .5);
   &.debug {
     background-color: rgba($turquoise, .5);
   }
+
 }
 
 .innerContainerBody {
-  min-height: 100vh;
   width: $layoutContainerInnerWidth;
+  font-size: 15px;
+  background: url("/assets/background-tile.jpg") repeat;
+
+
+  min-height: calc(100vh - #{$doubleLineNavMinHeight} - #{$primaryNavHeight});
+
+  &.doubleLineTopNav {
+    min-height: calc(100vh - #{$doubleLineNavHeight} - #{$primaryNavHeight});
+  }
 
   &.debug {
     background-image: repeating-linear-gradient(90deg, $white, $white $columnMargin, $magenta $columnMargin, $magenta calc(#{$columnMargin} + #{$columnInnerWidth}), $white calc(#{$columnMargin} + #{$columnInnerWidth}), $white $columnOuterWidth);
   }
 }
+
+.outerContainerFooter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.innerContainerFooter {
+  width: 100%;
+  max-width: $layoutContainerOuterWidth;
+  margin: 0 auto;
+
+  min-height: $primaryNavHeight;
+}
+
 
 .block {
   margin: 0 $columnMargin;
