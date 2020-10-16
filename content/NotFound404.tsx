@@ -5,7 +5,7 @@ import cn from "classnames"
 
 const NotFound404: React.FC = () => (
   <section className={cn(layoutStyles.block, layoutStyles.width12, pageStyles.firstSection)}>
-    No Content yet
+    No Content
   </section>
 );
 
