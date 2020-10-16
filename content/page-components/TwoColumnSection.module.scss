@@ -1,0 +1,19 @@
+@import "../../components/layout/constants.module";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-grow: 1;
+
+  &.left {
+    width: $columnWidth4;
+  }
+
+  &.right {
+    width: $columnWidth6;
+  }
+}

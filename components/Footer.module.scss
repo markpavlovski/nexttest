@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.footerBar {
+  background: url("/assets/contours-pattern.png") repeat-x;
+  transform: rotate(180deg);
+  height: 74px; //height of the background image
+}
+
+.footerContent {
+  padding: 1.5rem 0;
+
+  p {
+    text-align: center;
+    margin: 0.25rem;
+  }
+}

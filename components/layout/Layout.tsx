@@ -6,9 +6,10 @@ import Nav from "../nav/Nav";
 import Head from "next/head";
 import {isDoubleLineTopNav} from "../../common/utils";
 import FooterNav from "../nav/FooterNav";
+import Footer from "../Footer";
 
 const Layout: React.FC<LayoutProps> = props => {
-  const {children, debug, activePage} = props;
+  const {children, debug, activePage, footerContent} = props;
   const showFullSecondaryBar = isDoubleLineTopNav(activePage);
 
   return (
@@ -32,7 +33,12 @@ const Layout: React.FC<LayoutProps> = props => {
           [styles.debug]: debug,
           [styles.doubleLineTopNav]: showFullSecondaryBar,
         })}>
+          <main>
           {children}
+          </main>
+          <footer>
+            <Footer footerHTML={footerContent.content}/>
+          </footer>
         </div>
       </div>
       <footer className={styles.outerContainerFooter}>

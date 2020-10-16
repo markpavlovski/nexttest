@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+
 // Colors
 $darkBrown: #44443a;
 $lightBrown: #68685b;
 $white100: #fff;
 $white200: #ebebdb;
 $green100: #316531;
+$green200: #adb386;
+$red100: #d13e3b;
 
 $black: #000;
 $white: #fff;
@@ -11,3 +16,9 @@ $whiteish: #ccc;
 $turquoise: #55efc4;
 $magenta: lighten(#FF00FF, 20%);
 
+//
+
+$primaryFontFamily: Montserrat, sans-serif;
+$secondaryFontFamily: Markazi Text, serif;
+
+$zMax: 1;

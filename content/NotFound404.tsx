@@ -1,11 +1,9 @@
 import React from "react";
-import layoutStyles from "../components/layout/Layout.module.scss";
-import pageStyles from "../pages/pages.module.scss";
-import cn from "classnames"
+import SectionHeader from "./page-components/SectionHeader";
 
 const NotFound404: React.FC = () => (
-  <section className={cn(layoutStyles.block, layoutStyles.width12, pageStyles.firstSection)}>
-    No Content
+  <section>
+    <SectionHeader text={"Not Found"}/>
   </section>
 );
 

@@ -1,0 +1,21 @@
+@import "../../styles/constants";
+@import "../../components/layout/constants.module";
+
+.container {
+  display: block;
+  padding: 0.5rem 2rem;
+  margin: 2rem auto;
+  color: $white200;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.125rem;
+  white-space: pre-line;
+  width: max-content;
+
+  transition: background-color 300ms ease;
+  background-color: $red100;
+  &:hover {
+    background-color: darken($red100,10%);
+  }
+}

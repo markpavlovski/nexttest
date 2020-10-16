@@ -4,6 +4,7 @@ import {Pages} from "./types";
 export const topNavItems: PrimaryNavItem[] = [
   {
     name: Pages.Rentals,
+    title: "Canoe, Kayak, & SUP Rentals",
     slug: "rentals",
     secondaryNavItems: [
       {
@@ -26,6 +27,7 @@ export const topNavItems: PrimaryNavItem[] = [
   },
   {
     name: Pages.Tours,
+    title: "Paddling Tours",
     slug: "tours",
     secondaryNavItems: [
       {
@@ -44,6 +46,7 @@ export const topNavItems: PrimaryNavItem[] = [
   },
   {
     name: Pages.Instruction,
+    title: "title",
     slug: "instruction",
     secondaryNavItems: [
       {
@@ -58,6 +61,7 @@ export const topNavItems: PrimaryNavItem[] = [
   },
   {
     name: Pages.RiverCamp,
+    title: "title",
     slug: "river-camp",
     secondaryNavItems: [
       {
@@ -80,10 +84,12 @@ export const topNavItems: PrimaryNavItem[] = [
   },
   {
     name: Pages.RiverClassroom,
+    title: "title",
     slug: "river-classroom",
   },
   {
     name: Pages.Directions,
+    title: "title",
     slug: "directions",
   }
 ];
@@ -92,18 +98,22 @@ export const topNavItems: PrimaryNavItem[] = [
 export const bottomNavItems: PrimaryNavItem[] = [
   {
     name: Pages.AboutUs,
+    title: "title",
     slug: "about-us"
   },
   {
     name: Pages.Employment,
+    title: "title",
     slug: "careers"
   },
   {
     name: Pages.Events,
+    title: "title",
     slug: "events"
   },
   {
     name: Pages.Forms,
+    title: "title",
     slug: "forms"
   }
 ];

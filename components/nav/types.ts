@@ -2,6 +2,7 @@ import {Pages} from "../../common/types";
 
 export interface PrimaryNavItem {
   name: Pages,
+  title: string,
   slug: string,
   secondaryNavItems?: SecondaryNavItem[]
 }

@@ -1,0 +1,31 @@
+@import "../../styles/constants";
+@import "../../components/layout/constants.module";
+
+
+.container {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $secondaryFontFamily;
+}
+
+.acorn {
+  display: inline-block;
+  width: 57px;
+  height: 32px;
+  margin: 0 1rem;
+  background: url("/assets/acorns-right.png");
+
+  &.acornLeft {
+    transform: scaleX(-1);
+  }
+
+  &.acornRight {
+    transform: scaleX(1);
+  }
+}

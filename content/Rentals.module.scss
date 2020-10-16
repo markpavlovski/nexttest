@@ -1,0 +1,9 @@
+@import "../styles/constants";
+
+.hoursTitle {
+  margin: 1rem 0;
+  font-family: $secondaryFontFamily;
+  font-weight: 300;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+}

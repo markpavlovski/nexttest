@@ -16,3 +16,7 @@ export interface BannerContent {
   visibleContent?: string;
   hiddenContent?: string;
 }
+
+export interface FooterContent {
+  content?: string;
+}

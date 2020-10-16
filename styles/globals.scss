@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "constants";
 
 html,
@@ -6,12 +5,13 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: Montserrat, sans-serif;
+  font-family: $primaryFontFamily;
   color: $darkBrown;
+  scroll-behavior: smooth;
 }
 
 a {
-  color: inherit;
+  color: $green100;
   text-decoration: none;
 }
 
@@ -19,6 +19,16 @@ button {
   all: unset
 }
 
+h1 {
+  font-family: $secondaryFontFamily;
+  font-size: 3.5rem;
+  margin: 0.5rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+
 * {
   box-sizing: border-box;
 }
+

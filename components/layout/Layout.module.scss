@@ -4,13 +4,14 @@
 .wallToWallContainer {
   width: 100vw;
   min-height: 100vh;
-  background: url("/assets/background-image.jpg");
+  background: url("/assets/background-image.jpg") fixed;
   background-size: cover;
 }
 
 .outerContainerHeader {
   width: 100%;
   margin: 0 auto;
+  z-index: $zMax;
 
   &.stickyHeader {
     position: sticky;
@@ -31,7 +32,7 @@
 }
 
 .outerContainerBody {
-  width: $layoutContainerOuterWidth;
+  max-width: $layoutContainerOuterWidth;
   margin: auto;
   padding: 0 $layoutContainerPadding;
 
@@ -49,7 +50,10 @@
 }
 
 .innerContainerBody {
-  width: $layoutContainerInnerWidth;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   font-size: 15px;
   background: url("/assets/background-tile.jpg") repeat;
 
@@ -84,49 +88,61 @@
 }
 
 .width1 {
-  min-width: $columnWidth1;
+  max-width: $columnWidth1;
+  margin: 0 $columnMargin;
 }
 
 .width2 {
-  min-width: $columnWidth2;
+  max-width: $columnWidth2;
+  margin: 0 $columnMargin;
 }
 
 .width3 {
-  min-width: $columnWidth3;
+  max-width: $columnWidth3;
+  margin: 0 $columnMargin;
 }
 
 .width4 {
-  min-width: $columnWidth4;
+  max-width: $columnWidth4;
+  margin: 0 $columnMargin;
 }
 
 .width5 {
-  min-width: $columnWidth5;
+  max-width: $columnWidth5;
+  margin: 0 $columnMargin;
 }
 
 .width6 {
-  min-width: $columnWidth6;
+  max-width: $columnWidth6;
+  margin: 0 $columnMargin;
 }
 
 .width7 {
-  min-width: $columnWidth7;
+  max-width: $columnWidth7;
+  margin: 0 $columnMargin;
 }
 
 .width8 {
-  min-width: $columnWidth8;
+  max-width: $columnWidth8;
+  margin: 0 $columnMargin;
 }
 
 .width9 {
-  min-width: $columnWidth9;
+  max-width: $columnWidth9;
+  margin: 0 $columnMargin;
 }
 
 .width10 {
-  min-width: $columnWidth10;
+  max-width: $columnWidth10;
+  margin: 0 $columnMargin;
 }
 
 .width11 {
-  min-width: $columnWidth11;
+  max-width: $columnWidth11;
+  margin: 0 $columnMargin;
 }
 
 .width12 {
-  min-width: $columnWidth12;
+  max-width: $columnWidth12;
+  margin: 0 $columnMargin;
 }

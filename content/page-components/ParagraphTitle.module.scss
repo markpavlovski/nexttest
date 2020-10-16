@@ -1,0 +1,11 @@
+@import '../../styles/constants';
+@import "../../components/layout/constants.module";
+
+.container {
+  margin: 2rem 0 1rem;
+  font-family: $secondaryFontFamily;
+  font-weight: 300;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+
+}

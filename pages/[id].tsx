@@ -1,25 +1,30 @@
 import Layout from "../components/layout/Layout";
 import {allNavItems} from "../common/constants";
 import {getPageContent} from "../content/utils";
-import {BannerContent} from "../common/types";
 import Banner from "../components/Banner";
-import {getBannerContent} from "../data/staticContent";
+import {getStaticContent} from "../data/staticContent";
 import LogoBar from "../components/LogoBar";
+import PageTitle from "../components/PageTitle";
+import {StaticContent} from "../data/types";
+import ContentLayout from "../content/page-components/ContentLayout";
 
-export function PageLayout({navItem, bannerContent}) {
+export function PageLayout({navItem, bannerContent, footerContent}) {
   const PageContent = getPageContent(navItem.name);
 
   return (
-    <Layout activePage={navItem.name}>
+    <Layout activePage={navItem.name} footerContent={footerContent}>
       <Banner bannerContent={bannerContent}/>
       <LogoBar/>
-      <PageContent/>
+      <PageTitle title={navItem.title}/>
+      <ContentLayout>
+        <PageContent/>
+      </ContentLayout>
     </Layout>
   )
 }
 
-export default function Page({navItem, bannerContent}) {
-  return <PageLayout navItem={navItem} bannerContent={bannerContent}/>
+export default function Page(props) {
+  return <PageLayout {...props}/>
 }
 
 
@@ -38,13 +43,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
   const navItem = allNavItems.find(navItem => navItem.slug === params.id);
-  const bannerContent: BannerContent = await getBannerContent();
+  const staticContent: StaticContent = await getStaticContent();
 
   return {
     props: {
       pageSlug: params.id,
       navItem,
-      bannerContent
+      bannerContent: staticContent.banner,
+      footerContent: staticContent.footer,
     }
   }
 }

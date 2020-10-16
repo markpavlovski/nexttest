@@ -1,0 +1,15 @@
+@import "../../components/layout/constants.module";
+
+.container {
+  white-space: pre-line;
+  padding-left: 1rem;
+  margin: 0;
+
+  li{
+    margin: 1rem 0;
+    padding-left: 0.5rem;
+    &::marker {
+      content: url("/assets/list-marker.png");
+    }
+  }
+}
