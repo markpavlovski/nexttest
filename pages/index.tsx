@@ -1,16 +1,19 @@
-import pageStyles from './pages.module.scss'
-import layoutStyles from '../components/layout/Layout.module.scss'
-import Layout from "../components/layout/Layout";
-import cn from "classnames"
-import {Pages} from "../common/types";
+import {PageLayout} from "./[id]";
+import {topNavItems} from "../common/constants";
+import {BannerContent, Pages} from "../common/types";
+import {getBannerContent} from "../data/staticContent";
 
+export default function Index({bannerContent}) {
+  const navItem = topNavItems.find(navItem => navItem.name === Pages.Rentals);
+  return <PageLayout navItem={navItem} bannerContent={bannerContent}/>
+}
 
-export default function Index() {
-  return (
-    <Layout debug activePage={Pages.Rentals}>
-      <section className={cn(layoutStyles.block, layoutStyles.width12, pageStyles.firstSection)}>
-        {Pages.Rentals}
-      </section>
-    </Layout>
-  )
+export async function getStaticProps() {
+  const bannerContent: BannerContent = await getBannerContent();
+
+  return {
+    props: {
+      bannerContent
+    }
+  }
 }

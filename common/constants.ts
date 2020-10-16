@@ -88,6 +88,7 @@ export const topNavItems: PrimaryNavItem[] = [
   }
 ];
 
+
 export const bottomNavItems: PrimaryNavItem[] = [
   {
     name: Pages.AboutUs,

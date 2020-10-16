@@ -6,7 +6,7 @@ import Banner from "../components/Banner";
 import {getBannerContent} from "../data/staticContent";
 import LogoBar from "../components/LogoBar";
 
-export default function Page({navItem, bannerContent}) {
+export function PageLayout({navItem, bannerContent}) {
   const PageContent = getPageContent(navItem.name);
 
   return (
@@ -16,6 +16,10 @@ export default function Page({navItem, bannerContent}) {
       <PageContent/>
     </Layout>
   )
+}
+
+export default function Page({navItem, bannerContent}) {
+  return <PageLayout navItem={navItem} bannerContent={bannerContent}/>
 }
 
 
